@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    margin: 2rem auto;
+    max-width: 19rem;
+    /*background-image: url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 20%;*/
+}
+
+h1 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.heading-text p {
+    color: var(--Dark-Grayish-Magenta);
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.ratings {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.row {
+    background: var(--Light-Grayish-Magenta);
+    padding: 0.5rem;
+    border-radius: 8px;
+    max-width: 20rem;
+}
+
+.row p { 
+    margin-top: 5px; 
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: var(--Very-Dark-Magenta);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.profile-info img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.profile-info .text
+
+h2 {
+    font-size: 16px;
+    color: var(--White);
+    font-weight: 500;
+}
+
+.text p {
+    color: var(--Soft-Pink);
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+.card-content {
+    margin-top: 1rem;
+    color: var(--White);
+}
+
+@media (min-width: 768px) {
+    body { 
+        max-width: 45rem; 
+        /*background-image: url(images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 800% bottom;*/
+    }
+
+    .text-icon-column {
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+        gap: 1rem;
+    }
+
+    .ratings {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .row {
+        display: flex;
+        max-width: 20rem;
+        gap: 12px;
+        align-items: center;
+        /*padding: 0.5rem;*/
+        height: 50px;
+    }
+
+    .row:nth-child(2) { 
+        margin-left: 2rem;
+    }
+
+    .row:nth-child(3) { 
+        margin-left: 4rem; 
+    }
+
+    .card-column { flex-direction: row; }
+
+    .card:nth-child(2) {
+        position: relative;
+        top: 2rem;
+    }
+
+    .card:nth-child(3) {
+        position: relative;
+        top: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        max-width: 70rem;
+        margin-top: 5rem;
+    }
+
+    .text-icon-column {
+        grid-template-columns: 30rem 1fr;
+        gap: 13rem;
+    }
+}
+
